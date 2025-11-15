@@ -382,3 +382,170 @@ footer p { color: var(--secondary-text); }
     .contact-flex-container { flex-direction: column; }
     .contact-form, .contact-info { min-width: unset; width: 100%; }
 }
+
+/* =================================================
+   AJOUTS POUR LES PAGES DE PROJET DÉTAILLÉES (MODIFIÉ)
+   =================================================
+*/
+
+/* --- Nouvelle bannière Texte --- */
+.project-hero-text {
+    width: 100%;
+    background-color: var(--surface-color);
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--bg-color);
+}
+.project-hero-text h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    margin-bottom: 0.5rem;
+}
+.project-hero-text .project-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Pills de technologies --- */
+.project-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.project-pills span {
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--accent-color);
+}
+.project-pills span i {
+    margin-right: 5px;
+    color: var(--accent-color);
+}
+
+/* --- Bouton "Retour" --- */
+.cta-button-light {
+    display: inline-block;
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    border: 1px solid var(--surface-color);
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.cta-button-light:hover {
+    background-color: var(--surface-color);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+.cta-button-light i {
+    margin-right: 8px;
+}
+
+
+/* --- Contenu de la page de projet --- */
+.project-content {
+    background-color: var(--bg-color);
+    padding: 4rem 0;
+}
+
+.project-section {
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-section h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.project-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* --- Nouvelle classe pour les images pleine largeur --- */
+.project-image-full {
+    width: 100%;
+    max-width: 900px; /* S'assure qu'elle n'est pas TROP grande */
+    display: block;
+    margin: 2rem auto 0 auto; /* Espace en haut, centré */
+    border-radius: 8px;
+    border: 1px solid var(--bg-color);
+}
+
+
+/* --- Styles de la liste (inchangés) --- */
+.spec-list {
+    list-style: none;
+    padding-left: 0;
+}
+.spec-list li {
+    background-color: var(--bg-color);
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+}
+.spec-list li i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+/* --- Styles pour le tableau propre (inchangé) --- */
+.project-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px; 
+}
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--bg-color);
+}
+table th {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+table td {
+    color: var(--primary-text);
+}
+table tr:last-child td {
+    border-bottom: none;
+}
+table td:first-child {
+    font-weight: 500;
+    color: var(--primary-text);
+}
