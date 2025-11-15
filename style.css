@@ -384,11 +384,11 @@ footer p { color: var(--secondary-text); }
 }
 
 /* =================================================
-   AJOUTS POUR LES PAGES DE PROJET DÉTAILLÉES (MODIFIÉ)
+   AJOUTS POUR LES PAGES DE PROJET DÉTAILLÉES
    =================================================
 */
 
-/* --- Nouvelle bannière Texte --- */
+/* --- Bannière Texte --- */
 .project-hero-text {
     width: 100%;
     background-color: var(--surface-color);
@@ -481,44 +481,81 @@ footer p { color: var(--secondary-text); }
     font-size: 1.6rem;
 }
 
-/* --- Nouvelle classe pour les images pleine largeur --- */
+/* --- Classe pour les images pleine largeur --- */
 .project-image-full {
     width: 100%;
-    max-width: 900px; /* S'assure qu'elle n'est pas TROP grande */
+    max-width: 900px; 
     display: block;
-    margin: 2rem auto 0 auto; /* Espace en haut, centré */
+    margin: 2rem auto 0 auto; 
     border-radius: 8px;
     border: 1px solid var(--bg-color);
 }
 
+/* --- Colonnes (pour la section Godot) --- */
+.project-two-cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start; 
+    margin-bottom: 2rem;
+}
+.project-col-text {
+    flex: 1;
+    min-width: 300px;
+}
+.project-col-image {
+    flex: 1;
+    min-width: 300px;
+}
+.inline-image {
+    width: 100%;
+    border-radius: 8px;
+}
 
-/* --- Styles de la liste (inchangés) --- */
+/* =================================================
+   NOUVEAU : Styles de la liste (MODIFIÉS POUR LISIBILITÉ)
+   =================================================
+*/
 .spec-list {
     list-style: none;
     padding-left: 0;
 }
 .spec-list li {
     background-color: var(--bg-color);
-    padding: 12px;
+    padding: 15px 20px; /* Plus d'espace */
     border-radius: 5px;
     margin-bottom: 10px;
     border-left: 4px solid var(--accent-color);
+    /* On enlève display:flex pour que le titre et la desc s'empilent */
+}
+.spec-title {
     display: flex;
     align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-text); /* Titre plus visible */
+    margin-bottom: 8px; /* Espace entre titre et description */
 }
-.spec-list li i {
+.spec-title i {
     color: var(--accent-color);
     font-size: 1.2rem;
     margin-right: 15px;
     width: 20px;
     text-align: center;
 }
+.spec-desc {
+    color: var(--secondary-text); /* Texte secondaire plus discret */
+    padding-left: 35px; /* Aligne la description avec le titre (largeur icône + margin) */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 
 .mt-2 {
     margin-top: 2rem;
 }
 
-/* --- Styles pour le tableau propre (inchangé) --- */
+/* --- Styles pour le tableau propre --- */
 .project-table-responsive {
     width: 100%;
     overflow-x: auto;
@@ -527,7 +564,7 @@ footer p { color: var(--secondary-text); }
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 500px; 
+    min-width: 300px;
 }
 table th, table td {
     padding: 15px;
@@ -549,3 +586,33 @@ table td:first-child {
     font-weight: 500;
     color: var(--primary-text);
 }
+
+/* =================================================
+   STYLES POUR LE BLOC DE CODE (GDScript)
+   =================================================
+*/
+.code-block-container {
+    background-color: #0d1117; 
+    border-radius: 8px;
+    padding: 1.5rem;
+    overflow-x: auto; 
+    border: 1px solid var(--surface-color);
+    margin-top: 2rem;
+}
+.code-block-container pre {
+    margin: 0;
+}
+.code-block-container code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #c9d1d9; 
+}
+.code-comment { color: #8b949e; }
+.code-keyword { color: #ff7b72; }
+.code-class { color: #d2a8ff; }
+.code-function { color: #79c0ff; }
+.code-variable { color: #ffa657; }
+.code-string { color: #a5d6ff; }
+.code-number { color: #79c0ff; }
+.code-node { color: #7ee787; }
