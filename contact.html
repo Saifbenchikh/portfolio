@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Saif BENCHIKH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Saif BENCHIKH</a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-page">
+            <div class="container">
+                <h2>Contactez-moi</h2>
+                <p>N'hésitez pas à me contacter via le formulaire ou mes réseaux.</p>
+
+                <div class="contact-flex-container">
+                    
+                    <div class="contact-form">
+                        <h3>Envoyer un message</h3>
+                        
+                        <form action="https://formspree.io/f/xzzyvavo" method="POST">
+                            
+                            <div class="form-groupe">
+                                <label for="nom">Nom</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                            <div class="form-groupe">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-groupe">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Envoyer</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>Mes informations</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-envelope"></i> 
+                                <a href="mailto:sa.benchikh6@gmail.com">sa.benchikh6@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i> 
+                                07 49 79 99 01
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i> 
+                                HERBLAY 95220
+                            </li>
+                            <li>
+                                <i class="fab fa-linkedin"></i> 
+                                <a href="https://linkedin.com/in/saif-benchikh/" target="_blank">linkedin.com/in/saif-benchikh/</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 - Saif BENCHIKH. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
