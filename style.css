@@ -512,29 +512,25 @@ footer p { color: var(--secondary-text); }
     border-radius: 8px;
 }
 
-/* =================================================
-   NOUVEAU : Styles de la liste (MODIFIÉS POUR LISIBILITÉ)
-   =================================================
-*/
+/* --- Styles de la liste (MODIFIÉS POUR LISIBILITÉ) --- */
 .spec-list {
     list-style: none;
     padding-left: 0;
 }
 .spec-list li {
     background-color: var(--bg-color);
-    padding: 15px 20px; /* Plus d'espace */
+    padding: 15px 20px; 
     border-radius: 5px;
     margin-bottom: 10px;
     border-left: 4px solid var(--accent-color);
-    /* On enlève display:flex pour que le titre et la desc s'empilent */
 }
 .spec-title {
     display: flex;
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-text); /* Titre plus visible */
-    margin-bottom: 8px; /* Espace entre titre et description */
+    color: var(--primary-text);
+    margin-bottom: 8px;
 }
 .spec-title i {
     color: var(--accent-color);
@@ -544,8 +540,8 @@ footer p { color: var(--secondary-text); }
     text-align: center;
 }
 .spec-desc {
-    color: var(--secondary-text); /* Texte secondaire plus discret */
-    padding-left: 35px; /* Aligne la description avec le titre (largeur icône + margin) */
+    color: var(--secondary-text);
+    padding-left: 35px; /* Aligne la description */
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -587,10 +583,7 @@ table td:first-child {
     color: var(--primary-text);
 }
 
-/* =================================================
-   STYLES POUR LE BLOC DE CODE (GDScript)
-   =================================================
-*/
+/* --- STYLES POUR LE BLOC DE CODE (GDScript) --- */
 .code-block-container {
     background-color: #0d1117; 
     border-radius: 8px;
@@ -616,3 +609,35 @@ table td:first-child {
 .code-string { color: #a5d6ff; }
 .code-number { color: #79c0ff; }
 .code-node { color: #7ee787; }
+
+
+/* =================================================
+   NOUVEAU : STYLES POUR L'ENCADRÉ D'INFORMATION
+   =================================================
+*/
+.callout-box {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 5px solid;
+}
+.callout-box.info {
+    background-color: rgba(0, 170, 255, 0.1); /* Bleu clair (accent) */
+    border-color: var(--accent-color);
+}
+.callout-box i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--accent-color);
+    padding-top: 0.25rem;
+}
+.callout-box strong {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+}
+.callout-box p {
+    color: var(--secondary-text);
+    margin: 0;
+}
