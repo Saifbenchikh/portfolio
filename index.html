@@ -17,6 +17,7 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="CV-Saif BENCHIKH2.pdf" download>Mon CV</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +26,7 @@
         <section id="accueil" class="hero">
             <div class="container">
                 <img src="images/acceuil/saif_profile.webp" alt="Saif BENCHIKH - Photo de profil" class="profile-pic">
-                <h1>Bonjour, je suis Saif BENCHIKH</h1>
+                <h1 id="main-title-typing">Bonjour, je suis Saif BENCHIKH</h1>
                 <p class="subtitle">Élève-Ingénieur en Informatique | Alternance</p>
                 <p>
                     Élève-ingénieur en informatique à l'ESIEE-IT, je suis passionné par le développement
@@ -62,9 +63,9 @@
                             <li>Microsoft Office</li>
                         </ul>
                     </div>
-
+                    
                     <div class="competence-categorie">
-                        <h3><i class="fas fa-lightbulb"></i> Compétences Humaines (Soft Skills)</h3>
+                        <h3><i class="fas fa-lightbulb"></i> Compétences Humaines</h3>
                         <ul>
                             <li>Autonomie</li>
                             <li>Capacité d'apprentissage</li>
@@ -73,11 +74,21 @@
                             <li>Communication</li>
                         </ul>
                     </div>
-                    
+
+                    <div class="competence-categorie" id="contact-box">
+                        <h3><i class="fas fa-envelope"></i> Me Contacter</h3>
+                        <p class="contact-box-text">Un projet en tête ? Une question ? N'hésitez pas à me joindre.</p>
+                        <ul class="contact-box-links">
+                            <li><a href="mailto:sa.benchikh6@gmail.com"><i class="fas fa-at"></i> sa.benchikh6@gmail.com</a></li>
+                            <li><a href="https://linkedin.com/in/saif-benchikh/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        </ul>
+                        <a href="contact.html" class="cta-button">Formulaire de Contact</a>
+                    </div>
+
                 </div>
             </div>
         </section>
-
+        
         <section id="cv">
             <div class="container">
                 <h2>Mon CV</h2>
@@ -86,13 +97,6 @@
             </div>
         </section>
         
-        <section id="contact-raccourci">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Un projet en tête ? Parlons-en !</p>
-                <a href="contact.html" class="cta-button">Contactez-moi</a>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -101,5 +105,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
