@@ -745,7 +745,7 @@ table td:first-child {
     padding-top: 0.25rem;
 }
 .callout-box strong {
-    color: var(--primary-text);
+    color: var(--primary-text) !important;
     font-size: 1.1rem;
 }
 .callout-box p {
