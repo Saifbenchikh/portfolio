@@ -55,6 +55,7 @@ header nav {
     height: 40px; /* Ajouté pour le centrage du logo */
     display: flex;
     align-items: center;
+    z-index: 1003; /* AJOUTÉ : Pour être au-dessus du menu latéral */
 }
 .header-logo { /* NOUVEAU STYLE LOGO */
     height: 35px; 
@@ -83,12 +84,16 @@ header ul li a:hover {
 
 /* Style du bouton Hamburger (barres de menu) */
 .menu-toggle {
-    display: none; 
+    display: none; /* Caché par défaut, visible sur mobile */
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001;
+    z-index: 1003; /* AJOUTÉ : Pour être au-dessus du menu latéral */
+    flex-direction: column; /* AJOUTÉ : Pour empiler les barres */
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
 .menu-toggle .bar {
     display: block;
@@ -106,6 +111,62 @@ header ul li a:hover {
 }
 .menu-toggle.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ======== NOUVEAU : MENU LATÉRAL (SIDEBAR) ======== */
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 280px;
+    background-color: var(--surface-color);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    padding: 6rem 2rem 2rem 2rem;
+}
+.sidebar-menu.active {
+    transform: translateX(0);
+}
+.sidebar-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.sidebar-menu ul li {
+    margin: 0;
+}
+.sidebar-menu ul li a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.sidebar-menu ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* NOUVEAU : OVERLAY (FOND SOMBRE) */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -317,10 +378,21 @@ h3 {
 /* ======== SECTION CV (Raccourci) ======== */
 #cv {
     text-align: center;
-    background-color: var(--surface-color); 
+    background-color: var(--bg-color); /* MODIFIÉ : Utilise le fond principal */
     padding: 4rem 0;
-    border-top: 3px solid var(--accent-color); 
+    /* border-top: 3px solid var(--accent-color); */ /* Supprimé */
 }
+
+/* AJOUTÉ : Nous stylisons le .container comme une carte */
+#cv .container {
+    background-color: var(--surface-color);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px dashed var(--accent-color); /* Cohérent avec les cartes de compétences */
+    max-width: 900px; /* On le resserre un peu */
+}
+
 #cv p {
     max-width: 600px;
     margin: 0 auto 1.5rem auto;
@@ -345,7 +417,8 @@ h3 {
     border-radius: 15px; /* Angles arrondis */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 2px solid var(--accent-color);
+    /* border-left: 2px solid var(--accent-color); */ /* MODIFIÉ : Supprimé */
+    border: 1px dashed var(--accent-color); /* AJOUTÉ : Pour la cohérence */
 }
 .projet-carte:hover {
     transform: translateY(-5px);
@@ -479,22 +552,22 @@ footer {
 footer p { color: var(--secondary-text); }
 
 /* ======== MEDIA QUERIES (Responsive Design) ======== */
+/* MODIFIÉ : Logique pour le menu mobile */
 @media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        padding: 1rem;
+    /* On cache les liens du header */
+    header nav ul {
+        display: none;
     }
-    header ul {
-        margin-top: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+    
+    /* On affiche le bouton hamburger */
+    .menu-toggle {
+        display: flex; /* 'flex' fonctionne bien avec vos barres */
     }
-    header ul li {
-        margin: 0.5rem 0.8rem;
-    }
+
     .hero h1 { font-size: 2.8rem; }
     .hero .subtitle { font-size: 1.2rem; }
     h2 { font-size: 2rem; }
+    
     /* Grilles passent à 1 colonne sur mobile */
     .competences-grille, .projets-grille {
         grid-template-columns: 1fr;

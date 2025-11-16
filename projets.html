@@ -13,14 +13,31 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">Saif BENCHIKH</a>
+            
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="CV-Saif BENCHIKH2.pdf" download>Mon CV</a></li>
             </ul>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
     </header>
+
+    <div class="sidebar-menu" id="sidebar-menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="CV-Saif BENCHIKH2.pdf" download>Mon CV</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
     <main>
         <section id="projets-page">
@@ -29,7 +46,7 @@
                 
                 <div class="projets-grille">
 
-                    <div class="projet-carte">
+                    <div class="projet-carte animate-on-scroll">
                         <h3><a href="projet-rpg.html" class="projet-lien"> Projet RPG: Rêve (En cours)</a>
                         <p>
                             Un RPG psychologique tour par tour explorant les thèmes
@@ -39,8 +56,8 @@
                         <a href="#" class="projet-lien"><i class="fab fa-github"></i> Code sur GitHub (Bientôt)</a>
                     </div>
                     
-                    <div class="projet-carte">
-                        <h3><a href="projet-rpg.html" class="projet-lien"> Projet Jeu de Plateforme (C & Godot)</a>
+                    <div class="projet-carte animate-on-scroll">
+                        <h3><a href="projet-jeu-video.html" class="projet-lien"> Projet Jeu de Plateforme (C & Godot)</a>
                         <p>
                             Création d'un jeu 2D complet avec Godot, incluant la physique,
                             la gestion des animations, des combats et de l'interface
@@ -50,8 +67,8 @@
                         <a href="#" class="projet-lien"><i class="fab fa-github"></i> Code sur GitHub (Bientôt)</a>
                     </div>
                     
-                    <div class="projet-carte">
-                        <h3><a href="projet-rpg.html" class="projet-lien"> Projet Éolienne (Ingénierie)</a>
+                    <div class="projet-carte animate-on-scroll">
+                        <h3><a href="projet-eolienne.html" class="projet-lien"> Projet Éolienne (Ingénierie)</a>
                         <p>
                             Analyse, conception et modélisation d'une éolienne miniature fonctionnelle
                             en réponse à un cahier des charges d'ingénierie.
@@ -60,7 +77,7 @@
                         <a href="#" class="projet-lien"><i class="fab fa-github"></i> Code sur GitHub (Bientôt)</a>
                     </div>
                     
-                    <div class="projet-carte">
+                    <div class="projet-carte animate-on-scroll">
                         <h3>Présentateur en Journée Portes Ouvertes</h3>
                         <p>
                             Présentation de ma formation à ESIEE-IT lors de JPO.
@@ -81,5 +98,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

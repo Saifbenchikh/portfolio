@@ -13,14 +13,31 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">Saif BENCHIKH</a>
+            
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="CV-Saif BENCHIKH2.pdf" download>Mon CV</a></li>
             </ul>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
     </header>
+
+    <div class="sidebar-menu" id="sidebar-menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="CV-Saif BENCHIKH2.pdf" download>Mon CV</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
     <main>
         <section class="project-hero-text">
@@ -40,7 +57,7 @@
         <section class="project-content">
             <div class="container">
                 
-                <div class="project-section">
+                <div class="project-section animate-on-scroll">
                     <h2>Le Défi: Le Cahier des Charges</h2>
                     <p>L'objectif principal de ce projet était de développer un jeu de plateforme 2D complet, en se concentrant sur les mécaniques de jeu et l'expérience utilisateur.</p>
                     
@@ -73,7 +90,7 @@
                     </ul>
                 </div>
 
-                <div class="project-section">
+                <div class="project-section animate-on-scroll">
                     <h2>Choix Technologique: Godot Engine</h2>
                     <p>Pour ce projet, nous avons choisi le moteur de jeu **Godot Engine**. C'est un moteur open-source puissant qui gère la physique, les animations et le rendu, nous permettant de nous concentrer sur la logique du jeu (Game Logic).</p>
 
@@ -106,7 +123,7 @@
                     </div>
                 </div>
 
-                <div class="project-section">
+                <div class="project-section animate-on-scroll">
                     <h2><i class="fas fa-paint-brush"></i> Outils de Création</h2>
                     <p>Pour créer les ressources graphiques (sprites) du jeu, nous avons utilisé **Aseprite**, un éditeur de pixel art dédié.</p>
                     <ul class="spec-list">
@@ -117,7 +134,7 @@
                     </ul>
                 </div>
 
-                <div class="project-section">
+                <div class="project-section animate-on-scroll">
                     <h2><i class="fas fa-exclamation-triangle"></i> Défis Techniques Rencontrés</h2>
                     <p>Ce projet a présenté plusieurs défis techniques intéressants, notamment dans la gestion du personnage-joueur.</p>
                     <ul class="spec-list">
@@ -132,7 +149,7 @@
                     </ul>
                 </div>
 
-                <div class="project-section">
+                <div class="project-section animate-on-scroll">
                     <h2>Au Cœur du Code: Le Script du Joueur (player.gd)</h2>
                     <p>Le cœur de tout jeu de plateforme est le script du joueur. J'ai développé ce script en GDScript pour gérer tous les états du personnage : la gravité, les sauts, les déplacements, les animations, la réception de dégâts et les attaques.</p>
                     
@@ -234,6 +251,7 @@
             <p>© 2025 - Saif BENCHIKH. Tous droits réservés.</p>
         </div>
     </footer>
-
+    
+    <script src="script.js"></script>
 </body>
 </html>

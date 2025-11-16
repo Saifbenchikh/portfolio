@@ -13,14 +13,31 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">Saif BENCHIKH</a>
+            
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="CV-Saif BENCHIKH2.pdf" download>Mon CV</a></li>
             </ul>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
     </header>
+
+    <div class="sidebar-menu" id="sidebar-menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="CV-Saif BENCHIKH2.pdf" download>Mon CV</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
     <main>
         <section class="project-hero-text">
@@ -40,7 +57,7 @@
         <section class="project-content">
             <div class="container">
 
-                <div class="callout-box info">
+                <div class="callout-box info animate-on-scroll">
                     <i class="fas fa-info-circle"></i>
                     <div>
                         <strong>Ce projet est en cours de réalisation.</strong>
@@ -48,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="project-section">
+                <div class="project-section animate-on-scroll">
                     <h2>Concept & Univers</h2>
                     <p>Le jeu explore la psyché d'Henry, un homme brisé par la culpabilité, qui se réfugie dans un monde onirique pour échapper à une réalité insupportable.</p>
                     
@@ -68,7 +85,7 @@
                     </ul>
                 </div>
 
-                <div class="project-section">
+                <div class="project-section animate-on-scroll">
                     <h2>Gameplay & Mécaniques</h2>
                     <p>Le gameplay est conçu pour refléter la lutte interne du personnage principal.</p>
                     
@@ -88,7 +105,7 @@
                     </ul>
                 </div>
                 
-                <div class="project-section">
+                <div class="project-section animate-on-scroll">
                     <h2>Évolution de l'Ambiance</h2>
                     <p>L'atmosphère du jeu évolue pour suivre le parcours psychologique d'Henry.</p>
                     
@@ -118,5 +135,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
