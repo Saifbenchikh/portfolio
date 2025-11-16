@@ -270,12 +270,23 @@ h3 {
     transform: scale(1.05);
 }
 
-/* ======== Style de la nouvelle boîte contact (FIX DU LIEN BLEU) ======== */
+/* --- Style pour la nouvelle boîte contact (NETTOYÉE) --- */
 #contact-box {
     background-color: var(--surface-color); 
+    border: 1px dashed var(--accent-color); /* NOUVEAU : Bordure technique */
 }
-/* ... (autres styles inchangés) ... */
-
+#contact-box h3 {
+    color: var(--accent-color);
+}
+.contact-box-text {
+    color: var(--secondary-text);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+#contact-box .cta-button {
+    margin-top: 1rem; 
+    border-radius: 15px; 
+}
 .contact-box-links {
     list-style: none;
     padding-left: 0;
@@ -290,13 +301,9 @@ h3 {
     text-align: center;
 }
 .contact-box-links li a {
-    /* FIX : Rendre le texte blanc et enlever le soulignement */
-    color: var(--primary-text) !important; /* FORCE LA COULEUR BLANCHE SUR LES LIENS */
+    color: var(--primary-text);
     text-decoration: none;
     transition: color 0.3s ease;
-    /* AJOUT : Met l'icône à gauche du texte pour la lisibilité */
-    display: inline-flex;
-    align-items: center;
 }
 .contact-box-links li a i {
     color: var(--accent-color);
@@ -304,11 +311,8 @@ h3 {
     width: 20px;
 }
 .contact-box-links li a:hover {
-    color: var(--accent-color) !important; /* Devient bleu au survol */
-    text-decoration: underline;
+    color: var(--accent-color);
 }
-
-/* ... (le reste du style est inchangé) ... */
 
 /* ======== SECTION CV (Raccourci) ======== */
 #cv {
@@ -745,7 +749,7 @@ table td:first-child {
     padding-top: 0.25rem;
 }
 .callout-box strong {
-    color: var(--primary-text) !important;
+    color: var(--primary-text);
     font-size: 1.1rem;
 }
 .callout-box p {
