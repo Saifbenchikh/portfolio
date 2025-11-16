@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red & Black Snake</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="controls-container">
+        <button id="muteBtn">🔊 Mute</button>
+    </div>
+
+    <h1>SNAKE</h1>
+    <div class="score-container">
+        Score: <span id="score">0</span>
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    
+    <audio id="bgMusic" src="background.mp3" loop></audio>
+    <audio id="eatSound" src="eat.wav"></audio>
+    <audio id="gameOverSound" src="gameover.wav"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
