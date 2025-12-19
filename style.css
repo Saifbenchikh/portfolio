@@ -1,4 +1,4 @@
-/* ======== VARIABLES DE COULEURS (CORRIGÉES) ======== */
+/* ======== VARIABLES + COULEURS ======== */
 :root {
     --bg-color: #1a1a1a; 
     --surface-color: #2c2c2c; 
@@ -8,7 +8,7 @@
     --hover-color: #0088cc;
 }
 
-/* ======== RESET ET CONFIGURATION GLOBALE ======== */
+/* ======== Config ======== */
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@ body {
     padding: 0 2rem;
 }
 
-/* ======== HEADER (MENU) ======== */
+/* ======== HEADER ======== */
 header {
     background-color: var(--surface-color);
     padding: 1rem 0;
@@ -52,11 +52,11 @@ header nav {
     font-weight: 700;
     color: var(--accent-color);
     text-decoration: none;
-    height: 40px; /* Ajouté pour le centrage du logo */
+    height: 40px;
     display: flex;
     align-items: center;
 }
-.header-logo { /* NOUVEAU STYLE LOGO */
+.header-logo {
     height: 35px; 
     width: auto;
     filter: drop-shadow(0 0 5px rgba(0, 170, 255, 0.5));
@@ -81,7 +81,7 @@ header ul li a:hover {
     border-bottom-color: var(--accent-color);
 }
 
-/* Style du bouton Hamburger (barres de menu) */
+/* Style du bouton Hamburger*/
 .menu-toggle {
     display: none; 
     background: none;
@@ -109,7 +109,7 @@ header ul li a:hover {
 }
 
 
-/* ======== EFFET DE SAISIE (TYPING) ======== */
+/* ======== EFFET DE SAISIE ======== */
 .typing-cursor {
     border-right: 4px solid var(--accent-color);
     animation: blink 0.7s step-end infinite;
@@ -119,7 +119,7 @@ header ul li a:hover {
     50% { border-color: var(--accent-color); }
 }
 
-/* ======== CORPS PRINCIPAL + ANIMATION D'APPARITION (DEBUT) ======== */
+/* ======== CORPS PRINCIPAL + ANIMATION D'APPARITION ======== */
 main { 
     padding-top: 80px; 
     animation: fadeIn 0.8s ease-out;
@@ -153,7 +153,7 @@ h3 {
     font-weight: 600;
 }
 
-/* ======== SECTION ACCUEIL (HERO) ======== */
+/* ======== ACCUEIL ======== */
 .hero {
     background-color: var(--bg-color); 
     min-height: 80vh;
@@ -193,7 +193,7 @@ h3 {
     color: var(--primary-text);
 }
 
-/* ======== BOUTON D'ACTION (CTA) ======== */
+/* ======== BOUTON D'ACTION ======== */
 .cta-button {
     display: inline-block;
     background-color: var(--accent-color); 
@@ -215,7 +215,7 @@ h3 {
     box-shadow: 0 6px 20px rgba(0, 170, 255, 0.3);
 }
 
-/* ======== SECTION COMPÉTENCES (STYLE "PILLS") ======== */
+/* ======== SECTION COMPÉTENCES ======== */
 #competences {
     background-color: var(--bg-color); 
     padding-top: 3rem;
@@ -229,10 +229,10 @@ h3 {
 .competence-categorie {
     background-color: var(--surface-color); 
     padding: 2rem;
-    border-radius: 15px; /* Angles arrondis */
+    border-radius: 15px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-    border: 1px dashed var(--accent-color); /* NOUVEAU : Bordure technique */
+    border: 1px dashed var(--accent-color);
 }
 .competence-categorie h3 {
     color: var(--accent-color);
@@ -270,10 +270,10 @@ h3 {
     transform: scale(1.05);
 }
 
-/* --- Style pour la nouvelle boîte contact (NETTOYÉE) --- */
+/* --- Style pour la nouvelle boîte contact --- */
 #contact-box {
     background-color: var(--surface-color); 
-    border: 1px dashed var(--accent-color); /* NOUVEAU : Bordure technique */
+    border: 1px dashed var(--accent-color); 
 }
 #contact-box h3 {
     color: var(--accent-color);
@@ -314,11 +314,10 @@ h3 {
     color: var(--accent-color);
 }
 
-/* ======== SECTION CV (Raccourci) ======== */
-/* --- MODIFIÉ POUR LE STYLE "CARTE" --- */
+/* ======== SECTION CV ======== */
 #cv {
     text-align: center;
-    background-color: var(--bg-color); /* Utilise le fond principal */
+    background-color: var(--bg-color);
     padding: 4rem 0;
 }
 
@@ -327,8 +326,8 @@ h3 {
     padding: 3rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 1px dashed var(--accent-color); /* Cohérent avec les cartes de compétences */
-    max-width: 900px; /* On le resserre un peu */
+    border: 1px dashed var(--accent-color); 
+    max-width: 900px; 
 }
 /* --- FIN DE LA MODIFICATION CV --- */
 
@@ -339,7 +338,7 @@ h3 {
     color: var(--secondary-text);
 }
 
-/* ======== PAGE PROJETS (projets.html) ======== */
+/* ======== (projets.html) ======== */
 #projets-page {
     background-color: var(--bg-color); 
     padding-top: 4rem;
@@ -358,8 +357,8 @@ h3 {
     border-radius: 15px; /* Angles arrondis */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px dashed var(--accent-color); /* AJOUTÉ : Pour la cohérence */
-    /* border-left: 2px solid var(--accent-color); */ /* SUPPRIMÉ */
+    border: 1px dashed var(--accent-color); 
+   
 }
 /* --- FIN DE LA MODIFICATION PROJET-CARTE --- */
 
@@ -371,7 +370,7 @@ h3 {
     color: var(--accent-color); 
     font-size: 1.4rem;
 }
-/* Style pour les titres de projet cliquables */
+/* Style pour les titres de projet clic */
 .projet-carte h3 a {
     text-decoration: none;
     color: inherit; 
@@ -401,7 +400,7 @@ h3 {
     transform: translateX(5px);
 }
 
-/* ======== PAGE CONTACT (contact.html) ======== */
+/* ======== (contact.html) ======== */
 #contact-page {
     padding-top: 4rem;
 }
@@ -494,7 +493,7 @@ footer {
 }
 footer p { color: var(--secondary-text); }
 
-/* ======== MEDIA QUERIES (Responsive Design) ======== */
+/* ======== MEDIA QUERIES ======== */
 @media (max-width: 768px) {
     header nav {
         flex-direction: column;
@@ -511,7 +510,7 @@ footer p { color: var(--secondary-text); }
     .hero h1 { font-size: 2.8rem; }
     .hero .subtitle { font-size: 1.2rem; }
     h2 { font-size: 2rem; }
-    /* Grilles passent à 1 colonne sur mobile */
+   
     .competences-grille, .projets-grille {
         grid-template-columns: 1fr;
     }
@@ -519,10 +518,7 @@ footer p { color: var(--secondary-text); }
     .contact-form, .contact-info { min-width: unset; width: 100%; }
 }
 
-/* =================================================
-   AJOUTS POUR LES PAGES DE PROJET DÉTAILLÉES
-   =================================================
-*/
+  /*  =============AJOUTS POUR LES PAGES DE PROJET DÉTAILLÉES =================*/
 
 /* --- Bannière Texte --- */
 .project-hero-text {
@@ -586,7 +582,7 @@ footer p { color: var(--secondary-text); }
 }
 
 
-/* --- Contenu de la page de projet (REFONTE ESTHÉTIQUE) --- */
+/* --- Contenu de la page de projet --- */
 .project-content {
     background-color: var(--surface-color); 
     padding-top: 4rem;
@@ -624,7 +620,7 @@ footer p { color: var(--secondary-text); }
     border: 1px solid var(--surface-color); 
 }
 
-/* --- Colonnes (pour la section Godot) --- */
+/* --- Colonnes pour Godot --- */
 .project-two-cols {
     display: flex;
     flex-wrap: wrap;
@@ -718,7 +714,7 @@ table td:first-child {
     color: var(--primary-text);
 }
 
-/* --- STYLES POUR LE BLOC DE CODE (GDScript) --- */
+/* --- STYLES POUR LE BLOC DE CODE --- */
 .code-block-container {
     background-color: #0d1117; 
     border-radius: 15px; 
@@ -772,7 +768,7 @@ table td:first-child {
     color: var(--secondary-text);
     margin: 0;
 }
-/* ======== SCROLLYTELLING CSS (DEBUT) ======== */
+/* ======== SCROLLYTELLING CSS ======== */
 
 /* État initial : Elément caché, décalé vers le bas */
 .animate-on-scroll {
@@ -781,7 +777,7 @@ table td:first-child {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* État final : L'animation se déclenche quand JS ajoute la classe 'is-visible' */
+/* État final  */
 .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
