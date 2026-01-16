@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Rêve - Saif BENCHIKH</title>
-    <link rel="icon" type="image/png" href="../../favicon.png">
-    <link rel="stylesheet" href="../../style.css">
+    <meta name="description" content="Portfolio des projets réalisés par Saif BENCHIKH.">
+    <meta property="og:title" content="Projets - Saif BENCHIKH">
+    <title>Mes Projets - Saif BENCHIKH</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div id="loader"><div class="loader-logo">SB.</div></div>
-    <div class="background-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+    <div class="background-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
 
     <header>
         <nav class="container">
             <a href="index.html" class="logo">Saif.B</a>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html" class="active">Projets</a></li>
@@ -33,47 +30,104 @@
 
     <main>
         <section class="project-header">
-            <div class="container hero-content reveal">
-                <span class="breadcrumbs"><a href="../../jeux-videos.html">Jeux Vidéo</a> > RPG</span>
-                <h1>Projet Rêve</h1>
-                <p>Concept de RPG psychologique et narratif.</p>
+            <div class="container hero-content reveal" style="text-align: center;">
+                <span class="subtitle">Portfolio</span>
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Mes Réalisations</h1>
+                <p style="margin: 0 auto; max-width: 700px; font-size: 1.1rem; color: var(--secondary-text);">
+                    Une sélection rigoureuse de mes travaux alliant 
+                    <strong style="color: var(--primary-text);">Architecture Logicielle</strong>, 
+                    <strong style="color: var(--primary-text);">Ingénierie Système</strong> et 
+                    <strong style="color: var(--primary-text);">Game Design</strong>.
+                </p>
             </div>
         </section>
 
         <section style="padding-top: 0;">
             <div class="container">
-                
-                <div class="card reveal" style="text-align: center; margin-bottom: 3rem; background: rgba(255,255,255,0.7);">
-                    <p style="margin: 0; font-style: italic; color: var(--secondary-text);">
-                        "Un voyage dans la psyché d'un homme brisé, où le monde onirique s'effondre sous le poids de la culpabilité."
-                    </p>
-                </div>
+                <div class="grid-3">
 
-                <div class="grid-3" style="gap: 3rem;">
                     <div class="card reveal">
-                        <h3>Univers</h3>
-                        <p style="color: var(--secondary-text);">Dualité Réel (Gris) / Rêve (Coloré).</p>
+                        <div class="card-image-abstract abstract-web"></div>
+                        
+                        <div class="card-content">
+                            <h3>Task Master Pro</h3>
+                            <p style="font-size: 0.95rem; color: var(--secondary-text); margin-bottom: 1rem;">
+                                Une solution de productivité FullStack avec gestion de données complexe et algorithmes de tri.
+                            </p>
+                            <div class="tags" style="margin-bottom: 2rem;">
+                                <span class="tag">Flask</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">MVC</span>
+                            </div>
+                            <a href="projet-task-manager.html" class="link-button">
+                                Voir l'étude de cas <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="card reveal">
-                        <h3>Gameplay</h3>
-                        <p style="color: var(--secondary-text);">Combats symboliques contre le Déni et la Colère.</p>
-                    </div>
-                    <div class="card reveal">
-                        <h3>Narration</h3>
-                        <p style="color: var(--secondary-text);">Fins multiples selon les choix.</p>
-                    </div>
-                </div>
 
-                <div class="next-project reveal">
-                    <span style="font-size: 0.9rem; color: var(--secondary-text);">Retour à la collection</span><br>
-                    <a href="../../jeux-videos.html"><i class="fas fa-arrow-left"></i> Jeux Vidéo</a>
+                    <div class="card reveal">
+                        <div class="card-image-abstract abstract-eng"></div>
+                        
+                        <div class="card-content">
+                            <h3>Éolienne Miniature</h3>
+                            <p style="font-size: 0.95rem; color: var(--secondary-text); margin-bottom: 1rem;">
+                                Conception complète d'un système énergétique : modélisation 3D, physique et prototypage.
+                            </p>
+                            <div class="tags" style="margin-bottom: 2rem;">
+                                <span class="tag">Ingénierie</span>
+                                <span class="tag">3D</span>
+                                <span class="tag">Physique</span>
+                            </div>
+                            <a href="projet-eolienne.html" class="link-button">
+                                Détails techniques <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-image-abstract abstract-game"></div>
+                        
+                        <div class="card-content">
+                            <h3>Univers Jeux Vidéo</h3>
+                            <p style="font-size: 0.95rem; color: var(--secondary-text); margin-bottom: 1rem;">
+                                Développement de moteurs physiques, simulations interactives et narration vidéoludique.
+                            </p>
+                            <div class="tags" style="margin-bottom: 2rem;">
+                                <span class="tag">C++</span>
+                                <span class="tag">Godot</span>
+                                <span class="tag">JS</span>
+                            </div>
+                            <a href="jeux-videos.html" class="link-button">
+                                Explorer la collection <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-image-abstract abstract-comm"></div>
+                        
+                        <div class="card-content">
+                            <h3>Communication & JPO</h3>
+                            <p style="font-size: 0.95rem; color: var(--secondary-text); margin-bottom: 1rem;">
+                                Vulgarisation technique et présentation publique de projets d'ingénierie.
+                            </p>
+                            <div class="tags" style="margin-bottom: 2rem;">
+                                <span class="tag">Public Speaking</span>
+                                <span class="tag">Leadership</span>
+                            </div>
+                            <span class="link-button" style="background: #f1f5f9; color: var(--secondary-text); cursor: default; box-shadow: none; transform: none;">
+                                Compétence Humaine <i class="fas fa-lock" style="color: var(--secondary-text);"></i>
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
     <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
-    <footer><div class="container"><p></p></div></footer>
-    <script src="../../script.js"></script>
+    <footer><div class="container"><p>© 2025 - Saif BENCHIKH.</p></div></footer>
+    <script src="script.js"></script>
 </body>
 </html>

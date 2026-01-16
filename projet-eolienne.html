@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Éolienne Miniature - Saif BENCHIKH</title>
+    <title>Projet Éolienne - Saif BENCHIKH</title>
+    
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="background-blobs"><div class="blob blob-2"></div></div>
+    <div class="background-blobs"><div class="blob blob-2"></div><div class="blob blob-1"></div></div>
 
     <header>
         <nav class="container">
             <a href="index.html" class="logo">Saif.B</a>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html" class="active">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="CV-Saif BENCHIKH.pdf" download class="cta-button-outline" style="padding: 6px 15px; font-size: 0.85rem;">CV</a></li>
+                <li><a href="CV-Saif BENCHIKH.pdf" download class="cta-button-outline">CV</a></li>
             </ul>
         </nav>
     </header>
@@ -33,38 +32,129 @@
     <main>
         <section class="project-header">
             <div class="container hero-content reveal">
-                <span class="subtitle">Ingénierie Système</span>
-                <h1>Éolienne Miniature</h1>
-                <p>Conception, modélisation 3D et prototypage d'un système énergétique.</p>
+                <span class="subtitle">Conception Mécatronique</span>
+                <h1>Système Éolien Autonome</h1>
+                <p>De la modélisation aérodynamique à la production d'électricité : un cycle complet d'ingénierie.</p>
+                
+                <div class="project-actions" style="justify-content: center; margin-top: 2rem;">
+                    <span class="tag" style="background: #e0f2fe; color: #0284c7;"><i class="fas fa-cube"></i> CAD / CAO</span>
+                    <span class="tag" style="background: #f0fdf4; color: #15803d;"><i class="fas fa-bolt"></i> Électronique</span>
+                    <span class="tag" style="background: #fefce8; color: #854d0e;"><i class="fas fa-wind"></i> Physique</span>
+                </div>
             </div>
         </section>
 
         <section style="padding-top: 0;">
             <div class="container">
                 
-                <div class="grid-3" style="grid-template-columns: 1.5fr 1fr; gap: 3rem; margin-bottom: 3rem;">
-                    <div class="card reveal">
-                        <h3>Cahier des Charges</h3>
-                        <ul class="clean-list" style="border:none; margin-top: 1rem;">
-                            <li><i class="fas fa-check"></i> <strong>Conversion :</strong> Cinétique (Vent) → Mécanique → Électrique.</li>
-                            <li><i class="fas fa-check"></i> <strong>Stockage :</strong> Batterie intégrée pour autonomie.</li>
-                            <li><i class="fas fa-check"></i> <strong>Résistance :</strong> Structure stable jusqu'à 40 km/h.</li>
-                        </ul>
+                <div class="project-gallery reveal">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #475569, #1e293b); display:flex; flex-direction:column; align-items:center; justify-content:center; color:white;">
+                        <i class="fas fa-drafting-compass fa-3x mb-3"></i>
+                        <span>Modélisation 3D (SolidWorks)</span>
                     </div>
-                    <div class="card reveal" style="background: rgba(255,255,255,0.7);">
-                        <h3>Technique</h3>
-                        <ul class="clean-list" style="border:none; margin-top: 1rem;">
-                            <li><strong>Hauteur :</strong> 30 cm</li>
-                            <li><strong>Pales :</strong> 3 (ABS 3D)</li>
-                            <li><strong>Sortie :</strong> Courant Continu</li>
-                        </ul>
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #64748b, #94a3b8); display:flex; flex-direction:column; align-items:center; justify-content:center; color:white;">
+                        <i class="fas fa-microchip fa-3x mb-3"></i>
+                        <span>Circuit de Charge</span>
+                    </div>
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #0f172a, #334155); display:flex; flex-direction:column; align-items:center; justify-content:center; color:white;">
+                        <i class="fas fa-cogs fa-3x mb-3"></i>
+                        <span>Prototype Final</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" style="margin-top: 4rem;">
+                    <h3><i class="fas fa-ruler-combined" style="color: var(--accent-color);"></i> Cahier des Charges & Conception</h3>
+                    <p style="color: var(--secondary-text); margin-bottom: 1.5rem;">
+                        L'objectif était de concevoir une éolienne à axe horizontal (HAWT) compacte, capable de charger une batterie 12V dans des conditions de vent modéré, tout en restant démontable pour le transport.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #0284c7;"><i class="fas fa-feather-alt"></i> Aérodynamisme</h4>
+                            <p style="font-size: 0.9rem; color: var(--secondary-text);">
+                                Utilisation de profils de pales <strong>NACA 4412</strong> pour maximiser la portance à faible vitesse. Calcul de l'angle de calage optimal (Twist) pour réduire la traînée en bout de pale.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #0284c7;"><i class="fas fa-print"></i> Fabrication</h4>
+                            <p style="font-size: 0.9rem; color: var(--secondary-text);">
+                                Structure imprimée en <strong>3D (ABS)</strong> avec un remplissage nid d'abeille à 40% pour allier légèreté et résistance mécanique aux contraintes centrifuges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card reveal" style="margin-top: 2rem; background: #fff; border-left: 5px solid #0284c7;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">
+                        <i class="fas fa-calculator"></i> Focus : La Limite de Betz
+                    </h3>
+                    <p style="font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 1rem;">
+                        Le dimensionnement des pales a été effectué en tenant compte de la puissance maximale théorique récupérable du vent :
+                    </p>
+                    <div style="font-size: 1.2rem; text-align: center; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+                        $$ P = \frac{1}{2} \rho S v^3 C_p $$
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--secondary-text); margin-top: 1rem; text-align: center;">
+                        Où <strong>ρ</strong> est la densité de l'air, <strong>S</strong> la surface balayée, <strong>v</strong> la vitesse du vent, et <strong>Cp</strong> le coefficient de puissance (max 0.59).
+                    </p>
+                </div>
+
+                <div class="grid-3" style="margin-top: 3rem;">
+                    
+                    <div class="card reveal">
+                        <div class="card-icon" style="background: #e0f2fe; color: #0284c7;"><i class="fas fa-wind"></i></div>
+                        <h3>Capture</h3>
+                        <p style="font-size: 0.9rem;">
+                            Transformation de l'énergie <strong>cinétique</strong> du vent en énergie <strong>mécanique</strong> de rotation via le rotor tripale.
+                        </p>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-icon" style="background: #f0fdf4; color: #166534;"><i class="fas fa-sync"></i></div>
+                        <h3>Conversion</h3>
+                        <p style="font-size: 0.9rem;">
+                            Un multiplicateur de vitesse à engrenages planétaires entraîne un générateur DC pour produire une tension.
+                        </p>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-icon" style="background: #fefce8; color: #854d0e;"><i class="fas fa-battery-charging"></i></div>
+                        <h3>Régulation</h3>
+                        <p style="font-size: 0.9rem;">
+                            Pont de diodes pour redresser le courant et régulateur de charge pour alimenter la batterie de stockage en sécurité.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="card reveal" style="margin-top: 3rem;">
+                    <h3>Fiche Technique du Prototype</h3>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 10px; font-weight: 600; color: var(--primary-text);">Diamètre Rotor</td>
+                                <td style="padding: 10px; color: var(--secondary-text);">45 cm</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 10px; font-weight: 600; color: var(--primary-text);">Vitesse de démarrage</td>
+                                <td style="padding: 10px; color: var(--secondary-text);">3.5 m/s</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 10px; font-weight: 600; color: var(--primary-text);">Générateur</td>
+                                <td style="padding: 10px; color: var(--secondary-text);">Moteur DC 12V Inversé</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: 600; color: var(--primary-text);">Matériaux</td>
+                                <td style="padding: 10px; color: var(--secondary-text);">ABS, Aluminium, Roulements Inox</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
 
                 <div class="next-project reveal">
                     <span style="font-size: 0.9rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 1px;">Projet Suivant</span><br>
                     <a href="jeux-videos.html" style="font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--primary-text);">
-                        Collection Jeux Vidéo <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+                        Univers Jeux Vidéo <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
                     </a>
                 </div>
 

@@ -17,16 +17,12 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">Saif.B</a>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html" class="active">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="CV-Saif BENCHIKH.pdf" download class="cta-button-outline" style="padding: 6px 15px; font-size: 0.85rem;">CV</a></li>
+                <li><a href="CV-Saif BENCHIKH.pdf" download class="cta-button-outline">CV</a></li>
             </ul>
         </nav>
     </header>
@@ -34,13 +30,14 @@
     <main>
         <section class="project-header">
             <div class="container hero-content reveal">
-                <span class="subtitle">Web App FullStack</span>
+                <span class="subtitle">Architecture Web & Data</span>
                 <h1>Task Master Pro</h1>
-                <p>Gestionnaire de tâches avancé avec persistance des données et tri intelligent.</p>
+                <p>Bien plus qu'une "To-Do List" : Une application de gestion de projets relationnelle avec Dashboard analytique.</p>
                 
                 <div class="project-actions" style="justify-content: center; margin-top: 2rem;">
-                    <a href="https://github.com/ton-profil/ton-repo" target="_blank" class="cta-button"><i class="fab fa-github"></i> Voir le Code</a>
-                    <a href="#" class="cta-button-outline"><i class="fas fa-play"></i> Démo Live</a>
+                    <span class="tag" style="background: #e0e7ff; color: #4338ca;"><i class="fab fa-python"></i> Flask</span>
+                    <span class="tag" style="background: #dcfce7; color: #166534;"><i class="fas fa-database"></i> SQLite</span>
+                    <span class="tag" style="background: #fae8ff; color: #86198f;"><i class="fab fa-js"></i> Chart.js</span>
                 </div>
             </div>
         </section>
@@ -49,56 +46,119 @@
             <div class="container">
                 
                 <div class="project-gallery reveal">
-                    <img src="images/task_dashboard.jpg" alt="Dashboard" class="gallery-img" style="background:#cbd5e1;">
-                    <img src="images/task_mobile.jpg" alt="Version Mobile" class="gallery-img" style="background:#94a3b8;">
-                    <img src="images/task_code.jpg" alt="Structure Code" class="gallery-img" style="background:#e2e8f0;">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #1e293b, #334155); display:flex; flex-direction:column; align-items:center; justify-content:center; color:white;">
+                        <i class="fas fa-columns fa-3x mb-3"></i>
+                        <span>Dashboard Général</span>
+                    </div>
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #4f46e5, #4338ca); display:flex; flex-direction:column; align-items:center; justify-content:center; color:white;">
+                        <i class="fas fa-chart-pie fa-3x mb-3"></i>
+                        <span>Statistiques Chart.js</span>
+                    </div>
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #0f172a, #000000); display:flex; flex-direction:column; align-items:center; justify-content:center; color:white;">
+                        <i class="fas fa-moon fa-3x mb-3"></i>
+                        <span>Mode Sombre Natif</span>
+                    </div>
                 </div>
 
-                <div class="card reveal" style="margin: 3rem 0;">
-                    <h3>Le Projet</h3>
-                    <p style="color: var(--secondary-text);">
-                        Conception d'une application web robuste. L'objectif était de maîtriser le cycle de vie de la donnée (CRUD) et d'implémenter une logique métier complexe côté serveur.
+                <div class="card reveal" style="margin-top: 4rem;">
+                    <h3><i class="fas fa-cogs" style="color: var(--accent-color);"></i> Architecture & Backend</h3>
+                    <p style="color: var(--secondary-text); margin-bottom: 1.5rem;">
+                        L'application repose sur le micro-framework <strong>Flask</strong>. Contrairement à une approche ORM classique (comme SQLAlchemy), j'ai fait le choix d'utiliser des <strong>requêtes SQL brutes</strong> via le module <code>sqlite3</code> pour une maîtrise totale de la performance et de la structure relationnelle.
                     </p>
-                </div>
-
-                <div class="grid-3" style="margin-bottom: 3rem;">
-                    <div class="card reveal">
-                        <div class="card-icon"><i class="fas fa-server"></i></div>
-                        <h3>Backend</h3>
-                        <p style="font-size: 0.9rem;">Flask (Python), Routage MVC, Sessions.</p>
-                    </div>
-                    <div class="card reveal">
-                        <div class="card-icon"><i class="fas fa-database"></i></div>
-                        <h3>Data</h3>
-                        <p style="font-size: 0.9rem;">SQLite, Requêtes SQL brutes optimisées.</p>
-                    </div>
-                    <div class="card reveal">
-                        <div class="card-icon"><i class="fas fa-filter"></i></div>
-                        <h3>Logique</h3>
-                        <p style="font-size: 0.9rem;">Tri pondéré (Urgence vs Date).</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fas fa-network-wired"></i> Modèle Relationnel</h4>
+                            <p style="font-size: 0.9rem; color: var(--secondary-text);">
+                                La base de données gère une relation <strong>One-to-Many</strong> entre les tables <code>projects</code> et <code>tasks</code>. Chaque tâche est liée à un projet via une clé étrangère (<code>FOREIGN KEY</code>), permettant une organisation structurée des données.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fas fa-sort-amount-down"></i> Tri SQL Avancé</h4>
+                            <p style="font-size: 0.9rem; color: var(--secondary-text);">
+                                Plutôt que de trier les données en Python (ce qui est lent sur de gros volumes), j'ai implémenté une logique de tri pondérée directement dans le SQL.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card reveal">
-                    <h3>Focus Code : Tri SQL</h3>
-                    <pre><code># Logique de tri SQL pondéré
-sql_query += ''' ORDER BY CASE urgence 
-    WHEN 'danger' THEN 1 
-    WHEN 'warning' THEN 2 
-    WHEN 'primary' THEN 3 
-    ELSE 4 END ASC, date_echeance ASC'''</code></pre>
+                <div class="card reveal" style="margin-top: 2rem; background: #1e293b; color: white; border:none;">
+                    <h3 style="color:white; font-size: 1.2rem; margin-bottom: 1rem;">
+                        <i class="fas fa-code"></i> Extrait de app.py : Logique de pondération
+                    </h3>
+                    <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">
+                        Ce fragment montre comment l'urgence est convertie en valeur numérique pour le tri via un <code>CASE WHEN</code>.
+                    </p>
+                    <pre style="background: #0f172a; border: 1px solid #334155;"><code>elif filtre == 'urgence':
+    sql_query += ''' ORDER BY CASE urgence 
+                     WHEN 'danger' THEN 1 
+                     WHEN 'warning' THEN 2 
+                     WHEN 'primary' THEN 3 
+                     ELSE 4 END ASC, date_echeance ASC'''</code></pre>
+                </div>
+
+                <div class="grid-3" style="margin-top: 3rem;">
+                    
+                    <div class="card reveal">
+                        <div class="card-icon" style="background: #e0e7ff; color: #4338ca;"><i class="fas fa-history"></i></div>
+                        <h3>Persistance UX</h3>
+                        <p style="font-size: 0.9rem;">
+                            Utilisation intensive du <code>localStorage</code> en JavaScript. Si l'utilisateur ferme un onglet ou un dossier de projet, l'application se "souvient" de cet état au prochain chargement.
+                        </p>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-icon" style="background: #dcfce7; color: #166534;"><i class="fas fa-chart-bar"></i></div>
+                        <h3>Data Visualization</h3>
+                        <p style="font-size: 0.9rem;">
+                            Intégration de <strong>Chart.js</strong> pour générer des graphiques dynamiques (Doughnut & Bar) basés sur les données injectées par Jinja2.
+                        </p>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-icon" style="background: #fae8ff; color: #86198f;"><i class="fas fa-adjust"></i></div>
+                        <h3>Dark Mode</h3>
+                        <p style="font-size: 0.9rem;">
+                            Implémentation d'un thème sombre complet via des variables CSS CSS variables (<code>:root</code> vs <code>[data-theme="dark"]</code>).
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="card reveal" style="margin-top: 2rem;">
+                    <h3>Focus Frontend : Gestion des onglets (script.js)</h3>
+                    <p style="color: var(--secondary-text); margin-bottom: 1rem;">
+                        Ce script gère l'affichage dynamique sans rechargement de page et sauvegarde la préférence utilisateur.
+                    </p>
+                    <pre><code>function showTab(event, tabId) {
+    if(event) event.preventDefault();
+    // Masquer toutes les sections
+    document.querySelectorAll('.tab-section').forEach(el => el.classList.add('d-none'));
+    
+    // Afficher la cible avec animation
+    const target = document.getElementById('tab-' + tabId);
+    if(target) {
+        target.classList.remove('d-none');
+        target.classList.add('animate-stagger');
+    }
+    // Sauvegarde de l'état
+    localStorage.setItem('activeTab', tabId);
+}</code></pre>
                 </div>
 
                 <div class="next-project reveal">
                     <span style="font-size: 0.9rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 1px;">Projet Suivant</span><br>
-                    <a href="projet-eolienne.html">Éolienne Miniature <i class="fas fa-arrow-right"></i></a>
+                    <a href="projet-eolienne.html" style="font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--primary-text);">
+                        Éolienne Miniature <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+                    </a>
                 </div>
 
             </div>
         </section>
     </main>
 
-    <footer><div class="container"><p></p></div></footer>
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+    <footer><div class="container"><p>© 2025 - Saif BENCHIKH.</p></div></footer>
     <script src="script.js"></script>
 </body>
 </html>

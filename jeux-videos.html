@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeux Vidéo - Saif BENCHIKH</title>
+    
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,11 +18,7 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">Saif.B</a>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html" class="active">Projets</a></li>
@@ -32,44 +30,85 @@
 
     <main>
         <section class="project-header">
-            <div class="container hero-content reveal">
+            <div class="container hero-content reveal" style="text-align: center;">
                 <span class="subtitle">Game Development</span>
-                <h1>Collection Ludique</h1>
-                <p style="margin: 0 auto;">Simulations, Game Design et programmation graphique.</p>
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Collection Ludique</h1>
+                <p style="margin: 0 auto; max-width: 700px; font-size: 1.1rem; color: var(--secondary-text);">
+                    Exploration du Game Design et algorithmes interactifs.
+                </p>
             </div>
         </section>
 
-        <section class="bg-alt" style="background: transparent;">
+        <section style="padding-top: 0;">
             <div class="container">
                 <div class="grid-3">
 
                     <div class="card reveal">
-                        <div class="card-icon"><i class="fas fa-layer-group"></i></div>
-                        <h3>Platformer 2D</h3>
-                        <p style="margin-bottom: 1rem;">Moteur physique complet et gameplay.</p>
-                        <a href="jeux/patform/projet-jeu-video.html" class="link-arrow">Voir le projet Godot <i class="fas fa-arrow-right"></i></a>
+                        <div style="height: 160px; width: 100%; background: linear-gradient(135deg, #2e1065, #000000); display: flex; align-items: center; justify-content: center; border-radius: 8px 8px 0 0; border-bottom: 1px solid #4c1d95;">
+                            <i class="fas fa-ghost fa-3x" style="color: white; filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.5));"></i>
+                        </div>
+                        
+                        <div class="card-content" style="padding-top: 1.5rem;">
+                            <h3>Platformer 2D</h3>
+                            <p style="font-size: 0.95rem; color: var(--secondary-text); margin-bottom: 1rem;">
+                                Moteur physique complet avec Godot. Gravité, collisions et ennemis.
+                            </p>
+                            <div class="tags" style="margin-bottom: 2rem;">
+                                <span class="tag">Godot</span>
+                                <span class="tag">Physique</span>
+                            </div>
+                            <a href="jeux/patform/projet-jeu-video.html" class="cta-button-outline" style="width: 100%; justify-content: center; border-radius: 8px;">
+                                Voir le projet
+                            </a>
+                        </div>
                     </div>
 
                     <div class="card reveal">
-                        <div class="card-icon"><i class="fas fa-dice-d20"></i></div>
-                        <h3>Projet Rêve</h3>
-                        <p style="margin-bottom: 1rem;">RPG Narratif sur le deuil.</p>
-                        <a href="jeux/rpg/projet-rpg.html" class="link-arrow">Voir le concept <i class="fas fa-arrow-right"></i></a>
+                        <div style="height: 160px; width: 100%; background: linear-gradient(135deg, #064e3b, #000000); display: flex; align-items: center; justify-content: center; border-radius: 8px 8px 0 0; border-bottom: 1px solid #059669;">
+                            <i class="fas fa-square fa-3x" style="color: white; filter: drop-shadow(0 0 10px rgba(52, 211, 153, 0.5));"></i>
+                        </div>
+                        
+                        <div class="card-content" style="padding-top: 1.5rem;">
+                            <h3>Snake Retro</h3>
+                            <p style="font-size: 0.95rem; color: var(--secondary-text); margin-bottom: 1rem;">
+                                Le classique Arcade en JavaScript pur. Gestion de grille et score.
+                            </p>
+                            <div class="tags" style="margin-bottom: 2rem;">
+                                <span class="tag">JS</span>
+                                <span class="tag">Canvas</span>
+                            </div>
+                            <a href="jeux/snake/index.html" target="_blank" class="cta-button-outline" style="width: 100%; justify-content: center; border-radius: 8px;">
+                                Jouer <i class="fas fa-play" style="margin-left: 5px;"></i>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="card reveal">
-                        <div class="card-icon"><i class="fas fa-code"></i></div>
-                        <h3>Simulations JS</h3>
-                        <p style="margin-bottom: 1rem;">Snake & Écosystème Web.</p>
-                        <a href="jeux/world/index.html" target="_blank" class="link-arrow">Jouer <i class="fas fa-play"></i></a>
+                        <div style="height: 160px; width: 100%; background: linear-gradient(135deg, #1e3a8a, #000000); display: flex; align-items: center; justify-content: center; border-radius: 8px 8px 0 0; border-bottom: 1px solid #2563eb;">
+                            <i class="fas fa-globe fa-3x" style="color: white; filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.5));"></i>
+                        </div>
+                        
+                        <div class="card-content" style="padding-top: 1.5rem;">
+                            <h3>Ecosystem Sim</h3>
+                            <p style="font-size: 0.95rem; color: var(--secondary-text); margin-bottom: 1rem;">
+                                Simulation de vie artificielle et comportements autonomes.
+                            </p>
+                            <div class="tags" style="margin-bottom: 2rem;">
+                                <span class="tag">Algo</span>
+                                <span class="tag">Web</span>
+                            </div>
+                            <a href="jeux/world/index.html" target="_blank" class="cta-button-outline" style="width: 100%; justify-content: center; border-radius: 8px;">
+                                Lancer
+                            </a>
+                        </div>
                     </div>
 
                 </div>
 
                 <div class="next-project reveal">
-                    <span style="font-size: 0.9rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 1px;">Retour au début</span><br>
+                    <span style="font-size: 0.9rem; color: var(--secondary-text);">Retour au début</span><br>
                     <a href="projet-task-manager.html" style="font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--primary-text);">
-                        Task Master Pro <i class="fas fa-undo" style="margin-left: 10px;"></i>
+                        Task Master Pro <i class="fas fa-undo"></i>
                     </a>
                 </div>
 

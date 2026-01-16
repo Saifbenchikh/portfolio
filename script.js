@@ -16,11 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 3. NAVIGATION ACTIVE & MOBILE ---
+    // Récupère le nom du fichier actuel (ex: index.html)
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('header ul li a').forEach(link => {
-        // Gestion simple pour correspondre index.html et racine
+    const navLinks = document.querySelectorAll('header ul li a');
+
+    // ÉTAPE IMPORTANTE : On retire la classe 'active' de TOUS les liens d'abord
+    // Cela efface le soulignement "en dur" qui restait bloqué sous Contact
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Ensuite, on l'ajoute uniquement au lien correspondant à la page actuelle
+    navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+        // On récupère juste le nom du fichier dans le lien (pour gérer les ../..)
+        const linkPage = href ? href.split('/').pop() : '';
+
+        // Si le lien correspond à la page actuelle, on l'active
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
             link.classList.add('active');
         }
     });
@@ -49,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Animation des barres de compétences
+        // Animation des barres de compétences (visible au scroll)
         skills.forEach(skill => {
             const rect = skill.getBoundingClientRect();
             if (rect.top < windowHeight - 50) {
@@ -60,6 +73,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
+
+    // --- 4.5 GESTION DU DROPDOWN COMPÉTENCES (NOUVEAU) ---
+    const skillsToggle = document.querySelector('.skills-toggle');
+    const skillsDropdown = document.querySelector('.skills-dropdown');
+
+    if (skillsToggle && skillsDropdown) {
+        skillsToggle.addEventListener('click', () => {
+            // 1. Pivoter la flèche
+            skillsToggle.classList.toggle('active');
+            
+            // 2. Ouvrir/Fermer le contenu avec animation fluide
+            if (skillsDropdown.classList.contains('open')) {
+                // Fermeture
+                skillsDropdown.style.maxHeight = null;
+                skillsDropdown.classList.remove('open');
+            } else {
+                // Ouverture
+                skillsDropdown.classList.add('open');
+                skillsDropdown.style.maxHeight = skillsDropdown.scrollHeight + "px";
+                
+                // Petit hack pour re-déclencher l'animation des barres de progression cachées
+                const hiddenBars = skillsDropdown.querySelectorAll('.progress-bar-fill');
+                hiddenBars.forEach(bar => {
+                    bar.style.width = '0'; // Reset
+                    setTimeout(() => {
+                        bar.style.width = bar.getAttribute('data-width'); // Animate
+                    }, 100);
+                });
+            }
+        });
+    }
 
     // --- 5. LIGHTBOX (Galerie) ---
     const galleryImages = document.querySelectorAll('.gallery-img');
@@ -117,6 +161,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.borderColor = "";
                 }, 3000);
             });
+        });
+    }
+    
+    // --- 7. BOUTON RETOUR EN HAUT (Si présent dans le HTML) ---
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 });
