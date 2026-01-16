@@ -3,149 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Éolienne - Saif BENCHIKH</title>
+    <title>Éolienne Miniature - Saif BENCHIKH</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <div class="background-blobs"><div class="blob blob-2"></div></div>
+
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">Saif BENCHIKH</a>
+            <a href="index.html" class="logo">Saif.B</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Projets</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="CV-Saif BENCHIKH.pdf" download>Mon CV</a></li>
+                <li><a href="CV-Saif BENCHIKH.pdf" download class="cta-button-outline" style="padding: 6px 15px; font-size: 0.85rem;">CV</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="project-hero-text">
-            <div class="container">
-                <h1>Projet d'Ingénierie: Éolienne Miniature</h1>
-                <p class="project-subtitle">Conception & Modélisation d'un Système Énergétique Autonome</p>
-                <div class="project-pills">
-                    <span><i class="fas fa-microchip"></i> Ingénierie</span>
-                    <span><i class="fas fa-cube"></i> Modélisation 3D</span>
-                    <span><i class="fas fa-calculator"></i> Physique Appliquée</span>
-                    <span><i class="fas fa-users"></i> Travail d'équipe</span>
-                </div>
-                <a href="projets.html" class="cta-button-light"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+        <section class="project-header">
+            <div class="container hero-content reveal">
+                <span class="subtitle">Ingénierie Système</span>
+                <h1>Éolienne Miniature</h1>
+                <p>Conception, modélisation 3D et prototypage d'un système énergétique.</p>
             </div>
         </section>
 
-        <section class="project-content">
+        <section style="padding-top: 0;">
             <div class="container">
                 
-                <div class="project-section">
-                    <h2>Le Défi: Le Cahier des Charges</h2>
-                    <p>L'objectif de ce projet d'ingénierie était de concevoir et modéliser une éolienne miniature fonctionnelle. En équipe (Aristide, Nino, Saif), nous avons défini et respecté un cahier des charges précis pour guider notre conception.</p>
-                    
-                    <h3>Objectifs Clés</h3>
-                    <ul class="spec-list">
-                        <li>
-                            <div class="spec-title"><i class="fas fa-bolt"></i> Conversion Énergétique</div>
-                            <div class="spec-desc">Transformer l'énergie mécanique du vent en électricité.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-battery-half"></i> Stockage</div>
-                            <div class="spec-desc">Intégrer une solution de stockage d'énergie (batterie).</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-shield-alt"></i> Protection</div>
-                            <div class="spec-desc">Assurer la protection des composants électriques contre l'humidité.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-wind"></i> Résistance au Vent</div>
-                            <div class="spec-desc">Capacité à opérer sous des vents modérés (jusqu'à 40 Km/h).</div>
-                        </li>
-                         <li>
-                            <div class="spec-title"><i class="fas fa-wrench"></i> Facilité</div>
-                            <div class="spec-desc">Conception axée sur la simplicité d'assemblage et d'entretien.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-charging-station"></i> Utilité</div>
-                            <div class="spec-desc">Possibilité de recharger de petits appareils électroniques.</div>
-                        </li>
-                    </ul>
-                    
-                    <img src="images/projet_eolienne/cahiercharge.webp" alt="Cahier des Charges détaillé du projet" class="project-image-full">
-                </div>
-
-                <div class="project-section">
-                    <h2>Nos Choix de Conception</h2>
-                    
-                    <h3>1. Dimensions et Matériaux</h3>
-                    <p>Nous avons opté pour une structure compacte et robuste, adaptée à une éolienne miniature :</p>
-                    <ul class="spec-list">
-                        <li>
-                            <div class="spec-title"><i class="fas fa-arrows-alt-v"></i> Hauteur Totale</div>
-                            <div class="spec-desc">Environ 30 cm pour l'ensemble du mât et des pales.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-arrows-alt-h"></i> Longueur des Pales</div>
-                            <div class="spec-desc">10 à 15 cm pour optimiser la capture du vent.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-shapes"></i> Matériau (Pales)</div>
-                            <div class="spec-desc">ABS ou PP (Polypropylène) pour leur légèreté et résistance.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-hard-hat"></i> Matériau (Support)</div>
-                            <div class="spec-desc">Métal, assurant une stabilité et une durabilité accrues.</div>
-                        </li>
-                    </ul>
-
-                    <img src="images/projet_eolienne/dimensions.webp" alt="Diagramme détaillé des dimensions et matériaux de l'éolienne" class="project-image-full">
-
-                    <h3 class="mt-2">2. Optimisation des Pales</h3>
-                    <p>Un choix crucial était le nombre de pales. Nous avons analysé les avantages et inconvénients de chaque configuration :</p>
-                    
-                    <div class="project-table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Comparaison</th>
-                                    <th><i class="fas fa-water"></i> Deux Pales</th>
-                                    <th><i class="fas fa-fan"></i> Trois Pales</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Avantages</td>
-                                    <td>- Moins cher à fabriquer<br>- Moins de frottement (tourne plus vite)</td>
-                                    <td>- Meilleure efficacité énergétique<br>- Fonctionne sur large plage de vent</td>
-                                </tr>
-                                <tr>
-                                    <td>Inconvénients</td>
-                                    <td>- Moins stable, plus de vibrations<br>- Problématique pour grandes structures</td>
-                                    <td>- Légèrement plus cher à construire</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="grid-3" style="grid-template-columns: 1.5fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                    <div class="card reveal">
+                        <h3>Cahier des Charges</h3>
+                        <ul class="clean-list" style="border:none; margin-top: 1rem;">
+                            <li><i class="fas fa-check"></i> <strong>Conversion :</strong> Cinétique (Vent) → Mécanique → Électrique.</li>
+                            <li><i class="fas fa-check"></i> <strong>Stockage :</strong> Batterie intégrée pour autonomie.</li>
+                            <li><i class="fas fa-check"></i> <strong>Résistance :</strong> Structure stable jusqu'à 40 km/h.</li>
+                        </ul>
+                    </div>
+                    <div class="card reveal" style="background: rgba(255,255,255,0.7);">
+                        <h3>Technique</h3>
+                        <ul class="clean-list" style="border:none; margin-top: 1rem;">
+                            <li><strong>Hauteur :</strong> 30 cm</li>
+                            <li><strong>Pales :</strong> 3 (ABS 3D)</li>
+                            <li><strong>Sortie :</strong> Courant Continu</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="project-section">
-                    <h2>Principe de Fonctionnement</h2>
-                    <p>L'éolienne capture l'énergie cinétique du vent (énergie mécanique) et la convertit en énergie électrique grâce à un alternateur.</p>
-                    
-                    <img src="images/projet_eolienne/shemafonctionnement.webp" alt="Schéma détaillé de fonctionnement et conversion énergétique de l'éolienne" class="project-image-full">
-                    
-                    <p class="mt-2">La rotation des pales, générée par la portance du vent (principe de Bernoulli), entraîne l'arbre principal. Celui-ci est connecté à un alternateur (via un multiplicateur si nécessaire) qui convertit l'énergie mécanique en électricité. Cette électricité est ensuite acheminée vers un convertisseur et/un système de stockage (batterie) avant d'être distribuée au réseau ou utilisée.</p>
+                <div class="next-project reveal">
+                    <span style="font-size: 0.9rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 1px;">Projet Suivant</span><br>
+                    <a href="jeux-videos.html" style="font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--primary-text);">
+                        Collection Jeux Vidéo <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+                    </a>
                 </div>
+
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 - Saif BENCHIKH. Tous droits réservés.</p>
-        </div>
-    </footer>
-
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+    <footer><div class="container"><p>© 2025 - Saif BENCHIKH.</p></div></footer>
+    <script src="script.js"></script>
 </body>
 </html>

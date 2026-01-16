@@ -3,108 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Saif BENCHIKH</title>
+    <title>Saif BENCHIKH - Ingénieur Portfolio</title>
+    
+    <meta name="description" content="Portfolio de Saif BENCHIKH, Ingénieur Informatique & Électronique.">
+    <meta property="og:title" content="Portfolio - Saif BENCHIKH">
+    <meta property="og:description" content="Découvrez mes projets en ingénierie logicielle et développement web.">
+    <meta property="og:image" content="images/acceuil/saif_profile.webp">
+    
+    <link rel="icon" type="image/png" href="favicon.png"> 
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <div id="loader"><div class="loader-logo">SB.</div></div>
+
+    <div class="background-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">Saif BENCHIKH</a>
+            <a href="index.html" class="logo">Saif.B</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Projets</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="CV-Saif BENCHIKH.pdf" download>Mon CV</a></li>
+                <li><a href="CV-Saif BENCHIKH.pdf" download class="cta-button-outline" style="padding: 6px 15px; font-size: 0.85rem;">CV</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="accueil" class="hero">
-            <div class="container">
-                <img src="images/acceuil/saif_profile.webp" alt="Saif BENCHIKH - Photo de profil" class="profile-pic">
-                <h1 id="main-title-typing">Bonjour, je suis Saif BENCHIKH</h1>
-                <p class="subtitle">Élève-Ingénieur en Informatique | Alternance</p>
-                <p>
-                    Élève-ingénieur en informatique à l'ESIEE-IT, je suis passionné par le développement
-                    logiciel et l'électronique. Mes divers projets et mon expérience m'ont permis de développer ma rigueur et mes
-                    compétences techniques.
-                </p>
-                <a href="projets.html" class="cta-button">Voir mes réalisations</a>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <span class="subtitle">Ingénieur Informatique & Électronique</span>
+                    <h1>Saif BENCHIKH</h1>
+                    <p>Je conçois des architectures logicielles performantes et des solutions techniques durables.</p>
+                    <div class="btn-group">
+                        <a href="projets.html" class="cta-button">Voir mes projets <i class="fas fa-arrow-right"></i></a>
+                        <a href="contact.html" class="cta-button-outline">Me contacter</a>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <img src="images/acceuil/saif_profile.webp" alt="Saif BENCHIKH" class="profile-pic" loading="eager">
+                </div>
             </div>
         </section>
 
-        <section id="competences">
+        <div class="stats-section reveal">
+            <div class="container stats-grid">
+                <div class="stat-item"><h3>5+</h3><p>Projets Réalisés</p></div>
+                <div class="stat-item"><h3>3</h3><p>Langages Maîtrisés</p></div>
+                <div class="stat-item"><h3>100%</h3><p>Engagé</p></div>
+            </div>
+        </div>
+
+        <section id="expertise">
             <div class="container">
-                <h2>Mes Compétences</h2>
-                <div class="competences-grille">
-
-                    <div class="competence-categorie">
-                        <h3><i class="fas fa-code"></i> Langages de Programmation</h3>
-                        <ul>
-                            <li>Java / JEE</li>
-                            <li>Python</li>
-                            <li>C</li>
-                            <li>HTML, CSS</li>
-                            <li>SQL</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
-
-                    <div class="competence-categorie">
-                        <h3><i class="fas fa-tools"></i> Outils & Logiciels</h3>
-                        <ul>
-                            <li>Git & GitHub</li>
-                            <li>VS Code</li>
-                            <li>Jupyter Notebook</li>
-                            <li>Microsoft Office</li>
-                        </ul>
-                    </div>
+                <h2 class="reveal">Expertise Technique</h2>
+                <div class="grid-3">
                     
-                    <div class="competence-categorie">
-                        <h3><i class="fas fa-lightbulb"></i> Compétences Humaines</h3>
-                        <ul>
-                            <li>Autonomie</li>
-                            <li>Capacité d'apprentissage</li>
-                            <li>Résolution de problèmes</li>
-                            <li>Rigueur</li>
-                            <li>Communication</li>
-                        </ul>
+                    <div class="card reveal">
+                        <div class="card-icon"><i class="fas fa-code"></i></div>
+                        <h3>Développement</h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Python (Flask)</span><span>90%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>C / C++</span><span>80%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Java / JEE</span><span>75%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="75%"></div></div>
+                        </div>
                     </div>
 
-                    <div class="competence-categorie" id="contact-box">
-                        <h3><i class="fas fa-envelope"></i> Me Contacter</h3>
-                        <p class="contact-box-text">Un projet en tête ? Une question ? N'hésitez pas à me joindre.</p>
-                        <ul class="contact-box-links">
-                            <li><a href="mailto:sa.benchikh6@gmail.com"><i class="fas fa-at"></i> sa.benchikh6@gmail.com</a></li>
-                            <li><a href="https://linkedin.com/in/saif-benchikh/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                        </ul>
-                        <a href="contact.html" class="cta-button">Formulaire de Contact</a>
+                    <div class="card reveal">
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
+                        <h3>Data & Web</h3>
+                        <p style="margin-bottom: 1rem;">Conception de bases de données et API RESTful.</p>
+                        <div class="tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-icon"><i class="fas fa-tools"></i></div>
+                        <h3>DevOps & Outils</h3>
+                        <p style="margin-bottom: 1rem;">Environnement de développement professionnel.</p>
+                        <div class="tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Linux</span>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </section>
-        
-        <section id="cv">
-            <div class="container">
-                <h2>Mon CV</h2>
-                <p>Consultez mon parcours académique et professionnel complet.</p>
-                <a href="CV-Saif BENCHIKH.pdf" class="cta-button" target="_blank">Consulter mon CV</a>
+
+        <section class="bg-alt" style="text-align: center; padding: 4rem 0;">
+            <div class="container reveal">
+                <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--secondary-text); margin-bottom: 1rem;"></i>
+                <p style="font-size: 1.2rem; font-style: italic; max-width: 700px; margin: 0 auto 1rem;">
+                    "Saif a démontré une grande rigueur technique et une capacité d'adaptation remarquable lors de nos projets académiques."
+                </p>
+                <span style="font-weight: 700; color: var(--primary-text);">- Professeur ESIEE-IT</span>
             </div>
         </section>
-        
+
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 - Saif BENCHIKH. Tous droits réservés.</p>
-        </div>
-    </footer>
-
+    <footer><div class="container"><p></p></div></footer>
     <script src="script.js"></script>
 </body>
 </html>

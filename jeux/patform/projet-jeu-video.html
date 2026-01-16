@@ -3,239 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Jeu Vidéo - Saif BENCHIKH</title>
+    <title>Platformer 2D - Saif BENCHIKH</title>
     
+    <link rel="icon" type="image/png" href="../../favicon.png">
     <link rel="stylesheet" href="../../style.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <div class="background-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+
     <header>
         <nav class="container">
-            <a href="../../index.html" class="logo">Saif BENCHIKH</a>
+            <a href="index.html" class="logo">Saif.B</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul>
-                <li><a href="../../index.html">Accueil</a></li>
-                <li><a href="../../projets.html">Projets</a></li>
-                <li><a href="../../contact.html">Contact</a></li>
-                <li><a href="../../CV-Saif BENCHIKH2.pdf" download>Mon CV</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="CV-Saif BENCHIKH.pdf" download class="cta-button-outline" style="padding: 6px 15px; font-size: 0.85rem;">CV</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="project-hero-text">
-            <div class="container">
-                <h1>Projet Jeu de Plateforme</h1>
-                <p class="project-subtitle">Création d'un jeu 2D en C & GDScript avec le moteur Godot.</p>
-                <div class="project-pills">
-                    <span><i class="fas fa-gamepad"></i> Godot Engine</span>
-                    <span><i class="fas fa-code"></i> GDScript</span>
-                    <span><i class="fas fa-code"></i> Langage C</span>
-                    <span><i class="fas fa-ruler-combined"></i> Game Design</span>
+        <section class="project-header">
+            <div class="container hero-content reveal">
+                <span class="subtitle">Game Development</span>
+                <h1>Moteur de Jeu 2D</h1>
+                <p>Création d'un jeu de plateforme complet : Physique, Animations et Gameplay.</p>
+                <div class="project-actions" style="justify-content: center; margin-top: 2rem;">
+                    <a href="#" class="cta-button"><i class="fab fa-github"></i> Code Source</a>
                 </div>
-                <a href="../../jeux-videos.html" class="cta-button-light"><i class="fas fa-arrow-left"></i> Retour aux jeux vidéo</a>
             </div>
         </section>
 
-        <section class="project-content">
+        <section style="padding-top: 0;">
             <div class="container">
                 
-                <div class="project-section">
-                    <h2>Le Défi: Le Cahier des Charges</h2>
-                    <p>L'objectif principal de ce projet était de développer un jeu de plateforme 2D complet, en se concentrant sur les mécaniques de jeu et l'expérience utilisateur.</p>
-                    
-                    <h3>Objectifs Clés</h3>
-                    <ul class="spec-list">
-                        <li>
-                            <div class="spec-title"><i class="fas fa-smile"></i> Fonction Principale</div>
-                            <div class="spec-desc">Susciter l'amusement chez le joueur.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-trophy"></i> Fonction Secondaire</div>
-                            <div class="spec-desc">Procurer un challenge équilibré.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-running"></i> Animation</div>
-                            <div class="spec-desc">Tous les mouvements du joueur doivent être animés (course, saut, attaque).</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-check-circle"></i> Équilibrage</div>
-                            <div class="spec-desc">Le jeu doit être équilibré (difficulté progressive).</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-laptop-house"></i> Compatibilité</div>
-                            <div class="spec-desc">Compatible avec n'importe quel OS (Windows, Mac, Linux).</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-arrow-up"></i> Progression</div>
-                            <div class="spec-desc">Implémenter un système de progression pour récompenser le joueur.</div>
-                        </li>
-                    </ul>
+                <div class="project-gallery reveal">
+                    <img src="../../images/game_screen1.jpg" alt="Gameplay" class="gallery-img" style="background:#cbd5e1;">
                 </div>
 
-                <div class="project-section">
-                    <h2>Choix Technologique: Godot Engine</h2>
-                    <p>Pour ce projet, nous avons choisi le moteur de jeu **Godot Engine**. C'est un moteur open-source puissant qui gère la physique, les animations et le rendu, nous permettant de nous concentrer sur la logique du jeu (Game Logic).</p>
-
-                    <h3 class="mt-2">Pourquoi Godot ?</h3>
-                    <div class="project-table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th><i class="fas fa-plus-circle"></i> Avantages</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>- Facile d'apprentissage et intuitif.</td></tr>
-                                <tr><td>- Très peu gourmand en performances.</td></tr>
-                                <tr><td>- Scripts en GDScript, un langage similaire à Python.</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="project-table-responsive mt-2">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th><i class="fas fa-minus-circle"></i> Inconvénients</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>- Incompatible avec les consoles de salon (ex: PS5, Xbox).</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="grid-3" style="margin: 3rem 0;">
+                    <div class="card reveal"><h3>Gameplay</h3><p style="font-size: 0.9rem;">Gestion fluide des déplacements, sauts, double-sauts.</p></div>
+                    <div class="card reveal"><h3>Technique</h3><p style="font-size: 0.9rem;">Programmation orientée objet avec GDScript (Godot).</p></div>
+                    <div class="card reveal"><h3>Physique</h3><p style="font-size: 0.9rem;">Machine d'états pour la gravité et les collisions.</p></div>
                 </div>
 
-                <div class="project-section">
-                    <h2><i class="fas fa-paint-brush"></i> Outils de Création</h2>
-                    <p>Pour créer les ressources graphiques (sprites) du jeu, nous avons utilisé **Aseprite**, un éditeur de pixel art dédié.</p>
-                    <ul class="spec-list">
-                        <li>
-                            <div class="spec-title"><i class="fas fa-palette"></i> Aseprite</div>
-                            <div class="spec-desc">Cet outil a été essentiel pour dessiner et animer le personnage, les ennemis et les éléments de décor. Il a permis de créer facilement les différentes animations (idle, walk, jump, hit).</div>
-                        </li>
-                    </ul>
+                <div class="card reveal">
+                    <h3>Focus Code</h3>
+                    <pre><code>func _physics_process(delta):
+    if not is_on_floor():
+        velocity += get_gravity() * delta
+    move_and_slide()</code></pre>
                 </div>
 
-                <div class="project-section">
-                    <h2><i class="fas fa-exclamation-triangle"></i> Défis Techniques Rencontrés</h2>
-                    <p>Ce projet a présenté plusieurs défis techniques intéressants, notamment dans la gestion du personnage-joueur.</p>
-                    <ul class="spec-list">
-                        <li>
-                            <div class="spec-title"><i class="fas fa-heart-broken"></i> Gestion de la vie</div>
-                            <div class="spec-desc">Mettre en place un système de santé (`health`) qui se met à jour automatiquement, qui est "clampée" (ne peut pas aller sous 0 ou au-dessus de 100), et qui communique avec l'interface utilisateur.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-sync-alt"></i> Synchronisation des attaques</div>
-                            <div class="spec-desc">Empêcher le joueur de bouger pendant son animation d'attaque, résolu en utilisant une variable d'état (`is_attacking`) et un `Timer` pour bloquer le mouvement pendant 0.4 seconde.</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="project-section">
-                    <h2>Au Cœur du Code: Le Script du Joueur (player.gd)</h2>
-                    <p>Le cœur de tout jeu de plateforme est le script du joueur. J'ai développé ce script en GDScript pour gérer tous les états du personnage : la gravité, les sauts, les déplacements, les animations, la réception de dégâts et les attaques.</p>
-                    
-                    <div class="code-block-container">
-                        <pre><code><span class="code-keyword">extends</span> <span class="code-class">CharacterBody2D</span>
-
-<span class="code-comment"># --------------------- CONSTANTES ---------------------</span>
-<span class="code-keyword">const</span> <span class="code-variable">SPEED</span> = <span class="code-number">150.0</span>
-<span class="code-keyword">const</span> <span class="code-variable">JUMP_VELOCITY</span> = -<span class="code-number">250.0</span>
-<span class="code-keyword">const</span> <span class="code-variable">MAX_HEALTH</span> := <span class="code-number">100</span>
-
-<span class="code-comment"># --------------------- VARIABLES ---------------------</span>
-@onready <span class="code-keyword">var</span> animated_sprite = $<span class="code-node">AnimatedSprite2D</span>
-<span class="code-keyword">var</span> is_attacking = <span class="code-keyword">false</span>
-<span class="code-keyword">var</span> _health := <span class="code-number">100</span>
-@onready <span class="code-keyword">var</span> health_bar = get_tree().get_root().get_node(<span class="code-string">"/root/Game/CanvasLayer/la_barre"</span>)
-
-<span class="code-comment"># --------------------- PROPRIÉTÉ : health ---------------------</span>
-<span class="code-keyword">var</span> health : <span class="code-class">int</span>:
-	<span class="code-keyword">get</span>:
-		<span class="code-keyword">return</span> _health
-	<span class="code-keyword">set</span>(value):
-		_health = clamp(value, <span class="code-number">0</span>, <span class="code-variable">MAX_HEALTH</span>)
-		update_health_bar()
-		<span class="code-keyword">if</span> _health <= <span class="code-number">0</span>:
-			die()
-
-<span class="code-comment"># --------------------- MÉTHODES DE SANTÉ ---------------------</span>
-<span class="code-keyword">func</span> <span class="code-function">update_health_bar</span>():
-	<span class="code-keyword">if</span> health_bar:
-		health_bar.update_value(health)
-
-<span class="code-keyword">func</span> <span class="code-function">take_damage</span>(amount: <span class="code-class">int</span>):
-	health -= amount
-
-<span class="code-keyword">func</span> <span class="code-function">die</span>():
-	print(<span class="code-string">"le joueur est mort"</span>)
-
-<span class="code-comment"># --------------------- MÉTHODES DE CYCLE DE VIE ---------------------</span>
-<span class="code-keyword">func</span> <span class="code-function">_ready</span>():
-	<span class="code-keyword">if</span> health_bar == <span class="code-keyword">null</span>:
-		print(<span class="code-string">" ERREUR : ProgressBar non trouvée"</span>)
-	<span class="code-keyword">else</span>:
-		print(<span class="code-string">"Barre de vie bien trouvée"</span>)
-
-<span class="code-comment"># --------------------- PHYSIQUE ET CONTROLES ---------------------</span>
-<span class="code-keyword">func</span> <span class="code-function">_physics_process</span>(delta: <span class="code-class">float</span>) -> <span class="code-keyword">void</span>:
-	<span class="code-comment"># Appliquer la gravité</span>
-	<span class="code-keyword">if</span> <span class="code-keyword">not</span> is_on_floor():
-		velocity += get_gravity() * delta
-
-	<span class="code-comment"># Gérer le saut</span>
-	<span class="code-keyword">if</span> <span class="code-variable">Input</span>.is_action_just_pressed(<span class="code-string">"ui_accept"</span>) <span class="code-keyword">and</span> is_on_floor() <span class="code-keyword">and</span> <span class="code-keyword">not</span> is_attacking:
-		velocity.y = <span class="code-variable">JUMP_VELOCITY</span>
-
-	<span class="code-comment"># Gérer l'attaque</span>
-	<span class="code-keyword">if</span> <span class="code-variable">Input</span>.is_action_just_pressed(<span class="code-string">"attack"</span>) <span class="code-keyword">and</span> <span class="code-keyword">not</span> is_attacking:
-		is_attacking = <span class="code-keyword">true</span>
-		animated_sprite.play(<span class="code-string">"hit"</span>, <span class="code-number">3.0</span>, <span class="code-keyword">false</span>)
-		<span class="code-keyword">await</span> get_tree().create_timer(<span class="code-number">0.4</span>).timeout
-		is_attacking = <span class="code-keyword">false</span>
-		<span class="code-keyword">return</span>
-
-	<span class="code-comment"># --------------------- DÉPLACEMENT ET ANIMATION ---------------------</span>
-	<span class="code-keyword">if</span> <span class="code-keyword">not</span> is_attacking:
-		<span class="code-keyword">var</span> direction := <span class="code-variable">Input</span>.get_axis(<span class="code-string">"gauche"</span>, <span class="code-string">"droite"</span>)
-		velocity.x = direction * <span class="code-variable">SPEED</span>
-
-		<span class="code-keyword">if</span> <span class="code-keyword">not</span> is_on_floor():
-			<span class="code-keyword">if</span> animated_sprite.animation != <span class="code-string">"jump"</span>:
-				animated_sprite.play(<span class="code-string">"jump"</span>)
-			animated_sprite.flip_h = direction < <span class="code-number">0</span>
-		<span class="code-keyword">else</span>:
-			<span class="code-keyword">if</span> direction != <span class="code-number">0</span>:
-				<span class="code-keyword">if</span> animated_sprite.animation != <span class="code-string">"walk"</span>:
-					animated_sprite.play(<span class="code-string">"walk"</span>)
-				animated_sprite.flip_h = direction < <span class="code-number">0</span>
-			<span class="code-keyword">else</span>:
-				<span class="code-keyword">if</span> animated_sprite.animation != <span classs="code-string">"idle"</span>:
-					animated_sprite.play(<span class="code-string">"idle"</span>)
-	<span class="code-keyword">else</span>:
-		velocity.x = <span class="code-number">0</span>
-
-	move_and_slide()
-
-<span class="code-comment"># --------------------- GESTION FIN ANIMATION ---------------------</span>
-<span class="code-keyword">func</span> <span class="code-function">_on_animated_sprite_2d_animation_finished</span>():
-	<span class="code-keyword">if</span> animated_sprite.animation == <span class="code-string">"hit"</span>:
-		is_attacking = <span class="code-keyword">false</span>
-</code></pre>
-                    </div>
+                <div class="next-project reveal">
+                    <span style="font-size: 0.9rem; color: var(--secondary-text);">Découvrir aussi</span><br>
+                    <a href="../rpg/projet-rpg.html">Projet RPG : Rêve <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 - Saif BENCHIKH. Tous droits réservés.</p>
-        </div>
-    </footer>
-    
+    <footer><div class="container"><p></p></div></footer>
+    <script src="../../script.js"></script>
 </body>
 </html>

@@ -3,137 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Task Master - Saif BENCHIKH</title>
+    <title>Task Master Pro - Saif BENCHIKH</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <div class="background-blobs"><div class="blob blob-1"></div><div class="blob blob-3"></div></div>
+
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">Saif BENCHIKH</a>
+            <a href="index.html" class="logo">Saif.B</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Projets</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="CV-Saif BENCHIKH.pdf" download>Mon CV</a></li>
+                <li><a href="CV-Saif BENCHIKH.pdf" download class="cta-button-outline" style="padding: 6px 15px; font-size: 0.85rem;">CV</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="project-hero-text">
-            <div class="container">
-                <h1>Projet Web: Task Master Pro</h1>
-                <p class="project-subtitle">Développement d'un Gestionnaire de Tâches FullStack</p>
-                <div class="project-pills">
-                    <span><i class="fab fa-python"></i> Python Flask</span>
-                    <span><i class="fas fa-database"></i> SQLite</span>
-                    <span><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
-                    <span><i class="fas fa-code"></i> JavaScript</span>
+        <section class="project-header">
+            <div class="container hero-content reveal">
+                <span class="subtitle">Web App FullStack</span>
+                <h1>Task Master Pro</h1>
+                <p>Gestionnaire de tâches avancé avec persistance des données et tri intelligent.</p>
+                
+                <div class="project-actions" style="justify-content: center; margin-top: 2rem;">
+                    <a href="https://github.com/ton-profil/ton-repo" target="_blank" class="cta-button"><i class="fab fa-github"></i> Voir le Code</a>
+                    <a href="#" class="cta-button-outline"><i class="fas fa-play"></i> Démo Live</a>
                 </div>
-                <a href="projets.html" class="cta-button-light"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
             </div>
         </section>
 
-        <section class="project-content">
+        <section style="padding-top: 0;">
             <div class="container">
                 
-                <div class="project-section">
-                    <h2>Le Projet</h2>
-                    <p>
-                        Task Master Pro est une application web dynamique permettant de gérer ses tâches quotidiennes et ses projets complexes. 
-                        L'objectif était de créer une solution plus robuste qu'une simple "To-Do List" en intégrant une base de données relationnelle, 
-                        un système de tri avancé et une interface utilisateur moderne et persistante.
+                <div class="project-gallery reveal">
+                    <img src="images/task_dashboard.jpg" alt="Dashboard" class="gallery-img" style="background:#cbd5e1;">
+                    <img src="images/task_mobile.jpg" alt="Version Mobile" class="gallery-img" style="background:#94a3b8;">
+                    <img src="images/task_code.jpg" alt="Structure Code" class="gallery-img" style="background:#e2e8f0;">
+                </div>
+
+                <div class="card reveal" style="margin: 3rem 0;">
+                    <h3>Le Projet</h3>
+                    <p style="color: var(--secondary-text);">
+                        Conception d'une application web robuste. L'objectif était de maîtriser le cycle de vie de la donnée (CRUD) et d'implémenter une logique métier complexe côté serveur.
                     </p>
-                    
-                    <div class="callout-box info">
-                        <i class="fas fa-info-circle"></i>
-                        <div>
-                            <strong>Objectif Pédagogique</strong>
-                            <p>Maîtriser le framework Flask, la gestion des requêtes HTTP (GET/POST), et l'interaction avec une base de données SQL brute.</p>
-                        </div>
+                </div>
+
+                <div class="grid-3" style="margin-bottom: 3rem;">
+                    <div class="card reveal">
+                        <div class="card-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend</h3>
+                        <p style="font-size: 0.9rem;">Flask (Python), Routage MVC, Sessions.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
+                        <h3>Data</h3>
+                        <p style="font-size: 0.9rem;">SQLite, Requêtes SQL brutes optimisées.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon"><i class="fas fa-filter"></i></div>
+                        <h3>Logique</h3>
+                        <p style="font-size: 0.9rem;">Tri pondéré (Urgence vs Date).</p>
                     </div>
                 </div>
 
-                <div class="project-section">
-                    <h2>Fonctionnalités Clés & Architecture</h2>
-                    <p>J'ai conçu l'application pour être à la fois performante côté serveur et réactive côté client.</p>
-                    
-                    <ul class="spec-list">
-                        <li>
-                            <div class="spec-title"><i class="fas fa-server"></i> Backend Python (Flask)</div>
-                            <div class="spec-desc">Architecture MVC légère. Gestion des routes pour le CRUD (Créer, Lire, Mettre à jour, Supprimer) des tâches et des projets.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-database"></i> Base de Données (SQLite)</div>
-                            <div class="spec-desc">Schéma relationnel liant les tables <code>Tasks</code> et <code>Projects</code>. Utilisation de requêtes SQL optimisées pour le filtrage.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-sort-amount-down"></i> Algorithme de Tri SQL</div>
-                            <div class="spec-desc">Tri complexe combinant l'urgence (Priorité personnalisée via <code>CASE WHEN</code>) et la date d'échéance.</div>
-                        </li>
-                        <li>
-                            <div class="spec-title"><i class="fas fa-layer-group"></i> Interface Dynamique</div>
-                            <div class="spec-desc">Utilisation d'accordéons pour les projets, de modales pour l'édition et du <code>LocalStorage</code> JS pour sauvegarder l'état des onglets et du Mode Sombre.</div>
-                        </li>
-                    </ul>
+                <div class="card reveal">
+                    <h3>Focus Code : Tri SQL</h3>
+                    <pre><code># Logique de tri SQL pondéré
+sql_query += ''' ORDER BY CASE urgence 
+    WHEN 'danger' THEN 1 
+    WHEN 'warning' THEN 2 
+    WHEN 'primary' THEN 3 
+    ELSE 4 END ASC, date_echeance ASC'''</code></pre>
                 </div>
 
-                <div class="project-section">
-                    <h2>Focus Code : Le Moteur de Tri SQL</h2>
-                    <p>
-                        Une des parties les plus intéressantes a été de permettre le tri des tâches non seulement par date, mais aussi par "niveau d'urgence" (Urgent > Important > Normal), ce qui n'est pas un tri alphabétique standard.
-                    </p>
-
-                    <div class="code-block-container">
-<pre><code><span class="code-comment"># Extrait de app.py - Logique de tri côté serveur</span>
-<span class="code-keyword">elif</span> filtre == <span class="code-string">'urgence'</span>:
-    <span class="code-comment"># On utilise CASE WHEN pour donner un "poids" à chaque niveau d'urgence</span>
-    sql_query += <span class="code-string">''' ORDER BY CASE urgence 
-                     WHEN 'danger' THEN 1 
-                     WHEN 'warning' THEN 2 
-                     WHEN 'primary' THEN 3 
-                     ELSE 4 END ASC, date_echeance ASC'''</span>
-</code></pre>
-                    </div>
-                    <p class="mt-2">Cette approche permet de déléguer la logique de tri directement au moteur de base de données, rendant l'application plus rapide qu'un tri en Python.</p>
-                </div>
-
-                <div class="project-section">
-                    <h2>Expérience Utilisateur (UX)</h2>
-                    <p>L'interface a été pensée pour réduire la friction utilisateur :</p>
-                    
-                    <div class="project-two-cols">
-                        <div class="project-col-text">
-                            <ul class="spec-list">
-                                <li>
-                                    <div class="spec-title"><i class="fas fa-moon"></i> Mode Sombre/Clair</div>
-                                    <div class="spec-desc">Thème persistant grâce au stockage local du navigateur.</div>
-                                </li>
-                                <li>
-                                    <div class="spec-title"><i class="fas fa-memory"></i> Mémoire d'État</div>
-                                    <div class="spec-desc">Si l'utilisateur rafraîchit la page, il reste sur le même onglet et garde ses dossiers projets ouverts.</div>
-                                </li>
-                                <li>
-                                    <div class="spec-title"><i class="fas fa-filter"></i> Filtres Contextuels</div>
-                                    <div class="spec-desc">Possibilité de masquer les tâches terminées à l'intérieur de chaque projet.</div>
-                                </li>
-                            </ul>
-                        </div>
-                        </div>
+                <div class="next-project reveal">
+                    <span style="font-size: 0.9rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 1px;">Projet Suivant</span><br>
+                    <a href="projet-eolienne.html">Éolienne Miniature <i class="fas fa-arrow-right"></i></a>
                 </div>
 
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 - Saif BENCHIKH. Tous droits réservés.</p>
-        </div>
-    </footer>
-
+    <footer><div class="container"><p></p></div></footer>
+    <script src="script.js"></script>
 </body>
 </html>
